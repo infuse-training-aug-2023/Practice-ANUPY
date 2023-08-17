@@ -11,6 +11,11 @@ class Main {
     float sub = a-b;
     return sub;
 }
+
+    float multNumbers(float a, float b){
+        float mult = a*b;
+        return mult;
+    }
    
    public static void main(String args[]){
        Main cal = new Main();
