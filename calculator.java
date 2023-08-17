@@ -6,6 +6,11 @@ class Main {
        float sum = a+b;
        return sum;
    }
+
+   float subNumbers(float a, float b){
+    float sub = a-b;
+    return sub;
+}
    
    public static void main(String args[]){
        Main cal = new Main();
