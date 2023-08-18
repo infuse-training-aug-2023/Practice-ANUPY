@@ -8,7 +8,16 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
 .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
   height: 350px;
   border: 0.3vw solid seashell;
@@ -21,15 +30,6 @@ body {
   text-shadow: 2px 2px 1px rgb(36, 35, 35);
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.card{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+img{
+  position: absolute;
 }
