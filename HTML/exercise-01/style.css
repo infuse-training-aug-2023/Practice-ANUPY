@@ -9,6 +9,9 @@ body {
 }
 
 .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 350px;
   border: 0.3vw solid seashell;
@@ -26,10 +29,4 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-.card{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
