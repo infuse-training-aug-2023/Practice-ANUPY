@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /* Contains everything */
+  /* background-color: rgb(123, 68, 175); */
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 20% auto;
+}
+
+aside {
+  /* Side Panel */
+  /* background-color: rgb(28, 209, 149); */
+  border-right: 1px solid rgb(205, 205, 205);
+  height: 100vh;
+  width: 3ev;
+}
+
+.um-logo {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgb(205, 205, 205);
+  width: 100%;
+}
+/* Username, email and Profile Pic */
+.um-user-email {
+  font-size: small;
+  display: block;
+}
+
+.um-user{
+  display: flex;
+  margin: 10% 5%;
+}
+
+.um-user .um-user-name{
+  color: rgb(53, 132, 390);
+}
+
+.um-user img {
+  width: 40px;
+  margin-right: 5%;
+}
+
+/* Navigation first 5 */
+.um-navitems__main{
+  list-style-type: none;
+  padding: 5px;
+  padding-bottom: 0px;
+  border-bottom: 2px solid rgb(205, 205, 205);
+  
+}
+
+.um-navitems__main li{
+  padding: 15px;
+  font-size: large;
+  color: rgb(53, 132, 390);
+
+}
+
+.um-navitems__main li:nth-child(3){
+  background-color: lightblue;
+}
+
+.um-navitems__main li:nth-child(5){
+  border-left: 5px solid rgb(53, 132, 390);
+}
+.um-navitems__main span{
+  padding-left: 10px;
+}
+
+/* Navigation bottom 2 */
+
+.um-navitems__secondary{
+  list-style-type: none;
+  padding: 5px;
+  padding-top: 0px;
+}
+
+.um-navitems__secondary li{
+  padding: 15px;
+  font-size: large;
+  color: rgb(53, 132, 390);
+}
+
+.um-navitems__secondary span{
+  padding-left: 10px;
+}
+
+/* Main Interface */
+
+.test{
+  /* background-color: rgb(11, 234, 234); */
+  border: 12px solid rgb(182, 174, 174);
+  /* height: 100%; */
+}
+
+.test-data span.t{
+  color: white;
+  background-color: black;
+  font-size: large;
+  padding: 0 1vw 0 1vh;
+}
+
+.test-data .um-test-name{
+  font-size: large;
+  background-color: lightblue;
+}
+
+.bi-pencil-square{
+
+}
+.test-data i.bi-x{
+  float: right;
+  font-size: x-large;
+  /* color: white */
+}
+
+.test-properties span{
+  display: block;
+  color: whitesmoke;
+  font-size: medium;
+  background-color: rgb(53, 132, 390);
+}
+
+.form-properties{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/* .form-properties .details:first-child{
+  margin-top: 1%;
+} */
+
+.details label{
+  margin-top: 1%;
+  padding-bottom: 1%;
+}
+
+.description label{
+  vertical-align: top;
+}
+
+.description textarea{
+  margin-top: 1%;
+  padding: 10px;
+  width: 83%;
+}
+
+.options .bi{
+  padding: 10px;
+}
+
+.test-main {
+  /* display: grid;
+  grid-template-columns: 70% 30%; */
+  /* background-color: blueviolet; */
+  display: flex;
+  min-height: 80%;
+  height: 75vh;
+}
+
+/* Corner right */
+.test-main .test-data{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  border-left: 12px solid rgb(205, 205, 205);
+  /* background-color: brown; */
+}
+
+.test-flowchart{
+  width: 70%;
+}
+
+.test-flowchart span{
+  display: block;
+  color: whitesmoke;
+  font-size: large;
+  background-color: rgb(53, 132, 390);
+}
+.test-variables span{
+  display: block;
+}
+
+.test-variables{
+  height: 50%;
+}
+
+.test-variables .bi-plus{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.test-variables .table-header span{
+  display: inline;
+  padding-right: 20px;
+}
+
+.test-parameters .bi-plus{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.test-parameters .table-header span{
+  display: inline;
+  padding-right: 20px;
+}
+
