@@ -33,45 +33,34 @@ class TestAverage < Test::Unit::TestCase
         test_hash_creation = Hashoperations.new({
             532455.22 => 19,
             294823.33 => 319,
+            "hello" => 123,
             412030 => 299,
             410913 => 123
         })
-        assert_equal({532455.22=>19, 294823.33=>319, 412030=>299, 410913=>123,543121=>100},test_hash_creation.add_hash({
+        assert_equal({532455.22=>19, 294823.33=>319, "hello" => 123, 412030=>299, 410913=>123,543121=>100},test_hash_creation.add_hash({
                 532455.22 => 19,
                 294823.33 => 319,
+                "hello" => 123,
                 412030 => 299,
                 410913 => 123
             },543121, 100))
         
     end
 
-    def test_delete_non_Integer
+    def test_delete_from_hash
         test_hash_creation = Hashoperations.new({
             532455.22 => 19,
             294823.33 => 319,
+            "hello" => 123,
             412030 => 299,
             410913 => 123
         })
-        assert_equal({412030=>299, 410913=>123,543121=>100},test_hash_creation.delete_non_Integer({
+        assert_equal({410913=>123,543121=>100},test_hash_creation.delete_from_hash({
                 532455.22 => 19,
                 294823.33 => 319,
                 412030 => 299,
                 410913 => 123,
                 543121 => 100}))
-        
-    end
-
-    def test_delete_non_Integer
-        test_hash_creation = Hashoperations.new({
-            532455.22 => 19,
-            294823.33 => 319,
-            412030 => 299,
-            410913 => 123
-        })
-        assert_equal({410913=>123,543121=>100},test_hash_creation.delete_even_keys({
-            412030=>299, 
-            410913=>123,
-            543121=>100}))
         
     end
 end

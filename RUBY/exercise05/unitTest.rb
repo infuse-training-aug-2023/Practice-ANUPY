@@ -18,7 +18,7 @@ class TestAverage < Test::Unit::TestCase
             "age": 25,
             "salary": 25552.67
             },'content.json')
-        assert_equal(1,test_json_creation.read_file)
+        assert_equal("Read successful",test_json_creation.read_file)
     end
 
     def test_write_file
@@ -27,6 +27,6 @@ class TestAverage < Test::Unit::TestCase
             "age": 25,
             "salary": 25552.67
             },'content.json')
-        assert_equal(1,test_json_creation.write_to_file)
+        assert_equal("File write successful",test_json_creation.write_to_file)
     end
 end

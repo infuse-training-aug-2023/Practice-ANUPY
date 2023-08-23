@@ -16,23 +16,17 @@ class Hashoperations
         print_hash(hash_values)
     end
 
-    def delete_non_Integer(hash_values)
+    def delete_from_hash(hash_values)
         hash_values.each do |key,value|
             if(!key.is_a?Integer)
                 hash_values.delete(key)
             end
         end
-        # printHash(hash_values)
-    end
-
-    def delete_even_keys(hash_values)
         for key,value in hash_values do
             if (key % 2 == 0)
                 hash_values.delete(key)
             end
         end
-        
-        
     end
 end
 

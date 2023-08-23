@@ -22,7 +22,11 @@ class Content
     end
 
     def write_file
-        data=File.read(@@file_path)
+        begin
+            data=File.read(@@file_path)
+        rescue Errno::ENOENT
+            p "File not found"
+        else
         update_content = data.gsub(@@string, @@encoded_string)
         file_path = "Anup.txt"
         File.open(file_path, 'w') do |file|
@@ -31,13 +35,16 @@ class Content
         if(!is_empty = File.size(file_path) == 0)
             return 1
         end
+
+        end
+        
     end
     
 end
 
 
-# file_path='content.txt'
-# string = 'the string that will be base encoded'
-# content = Content.new(file_path,string)
+file_path='content.txt'
+string = 'the string that will be base encoded'
+content = Content.new(file_path,string)
 # content.read_file
-# content.write_file
+content.write_file
