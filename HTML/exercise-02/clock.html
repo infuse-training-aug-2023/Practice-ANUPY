@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Clock</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body onload="setInterval(timeNow,100)">
+        <div id="btn">
+            <button onclick="darkMode()">Dark Mode</button>
+            </div>
+        <div id="Display">
+            <div id="timeDisplay">
+            <script>
+                function timeNow(){
+                    const date = new Date();
+
+                    hh = date.getHours();
+                    mm = date.getMinutes();
+                    ss = date.getSeconds();
+
+                    time = hh+":"+mm+":"+ss;
+                    
+                    document.getElementById("timeDisplay").innerText = time;
+                }
+
+                function darkMode() {
+               const element = document.body;
+               element.classList.toggle("darkmode");
+            }
+            </script>
+           </div>
+
+        </div>
+    </body>
+</html>
