@@ -12,7 +12,7 @@
             <div id="timeDisplay">
             <script>
                 function timeNow(){
-                    let date = new Date();
+                    const date = new Date();
 
                     hh = date.getHours();
                     mm = date.getMinutes();
@@ -24,7 +24,7 @@
                 }
 
                 function darkMode() {
-               var element = document.body;
+               const element = document.body;
                element.classList.toggle("darkmode");
             }
             </script>

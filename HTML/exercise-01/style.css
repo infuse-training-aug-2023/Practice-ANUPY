@@ -7,7 +7,9 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-
+.card::after{
+  content: url("assets/new-usemango-logo.png");
+}
 .card {
   display: flex;
   justify-content: center;
