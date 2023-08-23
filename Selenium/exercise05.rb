@@ -9,6 +9,4 @@ search=driver.find_element(:id,'APjFqb')
 search.send_keys("Hello")
 search.send_keys(:enter)
 
-driver.manage.timeouts.implicit_wait = 10
-
 driver.quit

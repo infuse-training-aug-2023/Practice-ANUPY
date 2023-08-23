@@ -6,15 +6,14 @@ driver = Selenium::WebDriver.for :chrome
 driver.get 'https://computer-database.gatling.io/computers'
 
 table = driver.find_element(:class,'computers')
-header = table.find_element(:tag_name,'thead')
-row = header.find_elements(:tag_name,'th')
-puts row[0].text
+t_rows = table.find_elements(:tag_name,'tr')
 
-body = table.find_element(:tag_name,'tbody')
-col_row = body.find_elements(:tag_name,'tr')
+puts t_rows[0].find_element(:tag_name,'th').text
 
-for row in col_row do
-    puts row.find_elements(:tag_name, 'td')[0].text
+index =1
+while index < t_rows.length
+puts t_rows[index].find_element(:tag_name,'td').text
+    index = index +1
 end
 
 driver.quit

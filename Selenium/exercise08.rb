@@ -9,8 +9,8 @@ driver.switch_to.frame driver.find_elements(:class,'demo-frame')[-1]
 
 slider = wait.until { driver.find_element(:id, "slider") }
 
-driver.action.drag_and_drop_by(slider, 10, 0).perform
-
+# driver.action.drag_and_drop_by(slider, 10, 0).perform
+slider.find_element(:tag_name,'span').send_keys(:right)
 value = driver.find_element(:id, "amount")
 
 print value.attribute("value")
