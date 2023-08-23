@@ -97,22 +97,37 @@ aside {
   /* height: 100%; */
 }
 
+.test-data{
+  /* display: flex;
+  flex-direction: column; */
+  /* display: grid;
+  grid-template-rows: auto auto; */
+}
+
+
 .test-data span.t{
   color: white;
   background-color: black;
   font-size: large;
   padding: 0 1vw 0 1vh;
+  margin: 0px;
 }
 
 .test-data .um-test-name{
+  display: inline;
+  flex-direction: row;
+  justify-content: flex-start;
   font-size: large;
-  background-color: lightblue;
+  
+  align-items: flex-start;
+  float: end;
+  /* background-color: rgb(53, 132, 390); */
+  margin: 0px;
+  padding: 0px;
 }
 
-.bi-pencil-square{
-
-}
 .test-data i.bi-x{
+  display: inline;
   float: right;
   font-size: x-large;
   /* color: white */
@@ -123,6 +138,7 @@ aside {
   color: whitesmoke;
   font-size: medium;
   background-color: rgb(53, 132, 390);
+  /* margin-bottom: 0.1rem; */
 }
 
 .form-properties{
@@ -134,23 +150,41 @@ aside {
   margin-top: 1%;
 } */
 
+.details select{
+  margin: 0.5rem;
+  color: grey;
+  border: none;
+}
+
 .details label{
-  margin-top: 1%;
-  padding-bottom: 1%;
+  color: rgb(53, 82, 390);
+}
+
+.bi-plus-circle{
+  margin-left: 0.5rem;
+  font-size: large;
+  color: rgb(53, 82, 390);
 }
 
 .description label{
   vertical-align: top;
+  color: rgb(53, 82, 390);
 }
 
 .description textarea{
   margin-top: 1%;
   padding: 10px;
   width: 83%;
+  background-color: lightgray;
+  border: none;
 }
 
 .options .bi{
   padding: 10px;
+}
+
+.bi-play-fill, .bi-box-seam-fill, .bi-scissors, .bi-clipboard, .bi-trash{
+  border-left: 1px solid rgb(205, 205, 205);
 }
 
 .test-main {
@@ -169,6 +203,8 @@ aside {
   height: 100%;
   width: 30%;
   border-left: 12px solid rgb(205, 205, 205);
+  /* outline: 1px solid darkblue; */
+  box-shadow: outset 1px 0px 0px 1px  black;
   /* background-color: brown; */
 }
 
@@ -181,9 +217,23 @@ aside {
   color: whitesmoke;
   font-size: large;
   background-color: rgb(53, 132, 390);
+  margin-bottom: 0.5em;
 }
-.test-variables span{
+
+.test-variables span:first-child{
   display: block;
+  background-color: rgb(53, 132, 390);
+  color: white;
+  font-size: large;
+}
+
+
+
+.test-parameters span:first-child{
+  display: block;
+  background-color: rgb(53, 132, 390);
+  color: white;
+  font-size: large;
 }
 
 .test-variables{
@@ -193,20 +243,35 @@ aside {
 .test-variables .bi-plus{
   display: flex;
   justify-content: flex-end;
+  font-size: xx-large;
+  color: rgb(53, 82, 390);
 }
 
 .test-variables .table-header span{
   display: inline;
   padding-right: 20px;
+  color: rgb(53, 82, 390);
+  background-color: white;
+}
+
+.test-variables .table-header{
+  border-bottom: 1px solid rgb(205, 205, 205);
 }
 
 .test-parameters .bi-plus{
     display: flex;
     justify-content: flex-end;
+    font-size: xx-large;
+    color: rgb(53, 82, 390);
 }
 
 .test-parameters .table-header span{
   display: inline;
   padding-right: 20px;
+  color: rgb(53, 82, 390);
+  background-color: white;
 }
 
+.test-parameters .table-header{
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
