@@ -1,14 +1,11 @@
 <html>
-<head>
-  <title>Movie Database</title>
-</head>
 <body>
-  <header>
-    <h1>Movie Database</h1>
-  </header>
+  <header><a href="iframe_70.html">Home</a></header>
   <div class="search-bar">
     <input type="text" id="searchInput" placeholder="Search movies...">
     <button id="searchButton">Search</button>
+    <button id="sortAsc">Sort Ascending</button>
+    <button id="sortDesc">Sort Descending</button>
   </div>
   <main>
     <div class="movie-grid" id="movieGrid">
@@ -21,8 +18,8 @@
     <iframe id="infoIframe" src="" frameborder="0">
 
     </iframe>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </main>
-
-  <script src="script.js"></script>
 </body>
 </html>

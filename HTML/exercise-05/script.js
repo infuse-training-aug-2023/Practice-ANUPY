@@ -35,10 +35,32 @@ async function displayPage(pageNumber, movies) {
 
   const style = document.createElement('style');
   style.innerHTML = `
+      
+        main {
+          padding: 1rem;
+        }
+
       .movie-grid {
         display : grid;
         grid-template-columns : auto auto auto
       }
+        
+      .search-bar {
+        margin-bottom: 1rem;
+      }
+
+      .pagination {
+        margin: 1rem;
+      }
+
+      .view-more{
+        margin-bottom: 1rem;
+      }
+      
+      #sortAsc,#sortDesc{
+        float : right;
+      }
+        
     `;
 document.head.appendChild(style);
 
@@ -88,8 +110,35 @@ async function displayMovieDetails(imdbID) {
 
 //
 
+document.getElementById('searchButton').addEventListener('click', async () => {
+  const searchInput = document.getElementById('searchInput').value;
+  if (searchInput.trim() !== '') {
+    movies = await fetchMoviesBySearch(searchInput);
+    currentPage = 1;
+    displayPage(currentPage, movies);
+  }
+});
+
+async function fetchMoviesBySearch(searchTerm) {
+  const response = await fetch(`${baseUrl}?apikey=${apiKey}&s=${searchTerm}`);
+  const data = await response.json();
+  return data.Search;
+}
 
 
+//
+
+document.getElementById('sortAsc').addEventListener('click', () => {
+  movies.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
+  displayPage(currentPage, movies);
+});
+
+document.getElementById('sortDesc').addEventListener('click', () => {
+  movies.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
+  displayPage(currentPage, movies);
+});
+
+//
 document.getElementById('prevPage').addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--;
