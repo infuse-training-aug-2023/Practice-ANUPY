@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omdb</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .iframe-container {
+      display: flex;
+      height: 100%;
+    }
+
+    .iframe-70 {
+      flex: 70%;
+      height: 100%;
+      border: none;
+    }
+
+    .iframe-30 {
+      flex: 30%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="iframe-container">
+    <iframe class="iframe-70" src="iframe_70.html"></iframe>
+    <iframe id="iframe-30" src=""></iframe>
+  </div>
+</body>
+</html>
