@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: /app/backend
+    ports:
+      - 3001:3001
+    environment:
+      - PORT=3001
+  frontend:
+    build: /app/frontend
+    ports:
+      - 3000:3000
